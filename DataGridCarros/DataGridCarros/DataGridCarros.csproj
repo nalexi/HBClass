@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD07B825-B48B-46AA-9B7A-30F628EF5AF4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DataGridCarros</RootNamespace>
+    <AssemblyName>DataGridCarros</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adicao\frmAdicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicao\frmAdicionar.Designer.cs">
+      <DependentUpon>frmAdicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\EditCarros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\EditCarros.Designer.cs">
+      <DependentUpon>EditCarros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\EditMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\EditMarcas.Designer.cs">
+      <DependentUpon>EditMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\EditUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\EditUsuarios.Designer.cs">
+      <DependentUpon>EditUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao\EditVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao\EditVendas.Designer.cs">
+      <DependentUpon>EditVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarca.Designer.cs">
+      <DependentUpon>FormMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendas.Designer.cs">
+      <DependentUpon>FormVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Carro.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuerysInnerJoinDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuerysInnerJoinDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reativar\ReativCarros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reativar\ReativCarros.Designer.cs">
+      <DependentUpon>ReativCarros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reativar\ReativMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reativar\ReativMarcas.Designer.cs">
+      <DependentUpon>ReativMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reativar\ReativUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reativar\ReativUsuario.Designer.cs">
+      <DependentUpon>ReativUsuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Adicao\frmAdicionar.resx">
+      <DependentUpon>frmAdicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\EditCarros.resx">
+      <DependentUpon>EditCarros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\EditMarcas.resx">
+      <DependentUpon>EditMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\EditUsuarios.resx">
+      <DependentUpon>EditUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao\EditVendas.resx">
+      <DependentUpon>EditVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarca.resx">
+      <DependentUpon>FormMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendas.resx">
+      <DependentUpon>FormVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reativar\ReativCarros.resx">
+      <DependentUpon>ReativCarros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reativar\ReativMarcas.resx">
+      <DependentUpon>ReativMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reativar\ReativUsuario.resx">
+      <DependentUpon>ReativUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QuerysInnerJoinDataSet.xsc">
+      <DependentUpon>QuerysInnerJoinDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuerysInnerJoinDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuerysInnerJoinDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuerysInnerJoinDataSet.xss">
+      <DependentUpon>QuerysInnerJoinDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
