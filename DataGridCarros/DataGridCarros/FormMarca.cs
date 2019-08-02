@@ -1,4 +1,5 @@
-﻿using DataGridCarros.Edicao;
+﻿using DataGridCarros.Adicao;
+using DataGridCarros.Edicao;
 using DataGridCarros.Reativar;
 using System;
 using System.Collections.Generic;
@@ -53,6 +54,24 @@ namespace DataGridCarros
                     break;
             }
             this.marcasTableAdapter.CustomQuery(this.querysInnerJoinDataSet.Marcas);
+        }
+
+        private void BtnAddMarca_Click(object sender, EventArgs e)
+        {
+            AddMarca addMarca = new AddMarca();
+            addMarca.ShowDialog();
+
+            if (!string.IsNullOrEmpty(addMarca.marcasRow?.Nome))
+                this.marcasTableAdapter.Insert(
+                   addMarca.marcasRow.Nome,
+                   true,
+                   1,
+                   1,
+                   DateTime.Now,
+                   DateTime.Now
+                   );
+
+            this.marcasTableAdapter.Fill(this.querysInnerJoinDataSet.Marcas);
         }
     }
 }

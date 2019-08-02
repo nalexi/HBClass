@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicao\AddMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicao\AddMarca.Designer.cs">
+      <DependentUpon>AddMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicao\AddUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicao\AddUsuario.Designer.cs">
+      <DependentUpon>AddUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adicao\AddVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicao\AddVendas.Designer.cs">
+      <DependentUpon>AddVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Adicao\frmAdicionar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +119,9 @@
       <DependentUpon>FormVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Carro.cs" />
+    <Compile Include="Model\Marca.cs" />
+    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Model\Venda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuerysInnerJoinDataSet.Designer.cs">
@@ -126,6 +147,21 @@
     <Compile Include="Reativar\ReativUsuario.Designer.cs">
       <DependentUpon>ReativUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reativar\ReativVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reativar\ReativVendas.Designer.cs">
+      <DependentUpon>ReativVendas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Adicao\AddMarca.resx">
+      <DependentUpon>AddMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicao\AddUsuario.resx">
+      <DependentUpon>AddUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adicao\AddVendas.resx">
+      <DependentUpon>AddVendas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Adicao\frmAdicionar.resx">
       <DependentUpon>frmAdicionar.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reativar\ReativUsuario.resx">
       <DependentUpon>ReativUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reativar\ReativVendas.resx">
+      <DependentUpon>ReativVendas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,5 +1,6 @@
 ﻿using DataGridCarros.Adicao;
 using DataGridCarros.Edicao;
+using DataGridCarros.Meme;
 using DataGridCarros.Reativar;
 using System;
 using System.Collections.Generic;
@@ -86,8 +87,9 @@ namespace DataGridCarros
             frmAdicionar frmAdicionar = new frmAdicionar();
             frmAdicionar.ShowDialog();
 
-            //inseri no banco de dados
-            this.carrosTableAdapter.Insert(
+            if (!string.IsNullOrEmpty(frmAdicionar.carrosRow?.Modelo))
+                //inseri no banco de dados
+                this.carrosTableAdapter.Insert(
                 frmAdicionar.carrosRow.Modelo,
                 frmAdicionar.carrosRow.Ano,
                 frmAdicionar.carrosRow.Marca,
@@ -98,6 +100,12 @@ namespace DataGridCarros
                 DateTime.Now
                 );
             this.carrosTableAdapter.Fill(this.querysInnerJoinDataSet.Carros);
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Epico epico = new Epico();
+            epico.Show();
         }
     }
 }

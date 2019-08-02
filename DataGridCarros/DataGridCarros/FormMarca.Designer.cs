@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddMarca = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DeleteCommando = new System.Windows.Forms.DataGridViewButtonColumn();
             this.EditCommando = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -49,14 +49,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAddMarca
             // 
-            this.button1.Location = new System.Drawing.Point(13, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddMarca.Location = new System.Drawing.Point(13, 13);
+            this.btnAddMarca.Name = "btnAddMarca";
+            this.btnAddMarca.Size = new System.Drawing.Size(75, 23);
+            this.btnAddMarca.TabIndex = 0;
+            this.btnAddMarca.Text = "Adicionar";
+            this.btnAddMarca.UseVisualStyleBackColor = true;
+            this.btnAddMarca.Click += new System.EventHandler(this.BtnAddMarca_Click);
             // 
             // dataGridView1
             // 
@@ -198,7 +199,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnDesativados);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddMarca);
             this.Name = "FormMarca";
             this.Text = "FormMarca";
             this.Load += new System.EventHandler(this.FormMarca_Load);
@@ -211,7 +212,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddMarca;
         private System.Windows.Forms.DataGridView dataGridView1;
         private QuerysInnerJoinDataSet querysInnerJoinDataSet;
         private System.Windows.Forms.BindingSource marcasBindingSource;

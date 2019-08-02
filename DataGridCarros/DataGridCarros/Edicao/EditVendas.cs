@@ -31,9 +31,11 @@ namespace DataGridCarros.Edicao
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            decimal.TryParse(tbValor.Text, out decimal valor);
+
             VendasRow.Carro = (int)comboBox1.SelectedValue;
             VendasRow.Quantidade = (int)numericUpDown1.Value;
-            VendasRow.Valor = Convert.ToDecimal(tbValor.Text);
+            VendasRow.Valor = valor;
         }
     }
 }

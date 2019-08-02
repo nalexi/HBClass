@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.querysInnerJoinDataSet = new DataGridCarros.QuerysInnerJoinDataSet();
-            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vendasTableAdapter = new DataGridCarros.QuerysInnerJoinDataSetTableAdapters.VendasTableAdapter();
             this.DeleteCommand = new System.Windows.Forms.DataGridViewButtonColumn();
             this.EditCommand = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,9 +41,14 @@
             this.usuAltDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datIncDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datAltDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.querysInnerJoinDataSet = new DataGridCarros.QuerysInnerJoinDataSet();
+            this.vendasTableAdapter = new DataGridCarros.QuerysInnerJoinDataSetTableAdapters.VendasTableAdapter();
+            this.btnAddVendas = new System.Windows.Forms.Button();
+            this.btnDesativados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -76,20 +78,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 372);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // querysInnerJoinDataSet
-            // 
-            this.querysInnerJoinDataSet.DataSetName = "QuerysInnerJoinDataSet";
-            this.querysInnerJoinDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vendasBindingSource
-            // 
-            this.vendasBindingSource.DataMember = "Vendas";
-            this.vendasBindingSource.DataSource = this.querysInnerJoinDataSet;
-            // 
-            // vendasTableAdapter
-            // 
-            this.vendasTableAdapter.ClearBeforeFill = true;
             // 
             // DeleteCommand
             // 
@@ -192,18 +180,54 @@
             this.datAltDataGridViewTextBoxColumn.ReadOnly = true;
             this.datAltDataGridViewTextBoxColumn.Width = 125;
             // 
+            // vendasBindingSource
+            // 
+            this.vendasBindingSource.DataMember = "Vendas";
+            this.vendasBindingSource.DataSource = this.querysInnerJoinDataSet;
+            // 
+            // querysInnerJoinDataSet
+            // 
+            this.querysInnerJoinDataSet.DataSetName = "QuerysInnerJoinDataSet";
+            this.querysInnerJoinDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vendasTableAdapter
+            // 
+            this.vendasTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnAddVendas
+            // 
+            this.btnAddVendas.Location = new System.Drawing.Point(12, 12);
+            this.btnAddVendas.Name = "btnAddVendas";
+            this.btnAddVendas.Size = new System.Drawing.Size(119, 40);
+            this.btnAddVendas.TabIndex = 4;
+            this.btnAddVendas.Text = "Adicionar";
+            this.btnAddVendas.UseVisualStyleBackColor = true;
+            this.btnAddVendas.Click += new System.EventHandler(this.BtnAddVendas_Click);
+            // 
+            // btnDesativados
+            // 
+            this.btnDesativados.Location = new System.Drawing.Point(137, 12);
+            this.btnDesativados.Name = "btnDesativados";
+            this.btnDesativados.Size = new System.Drawing.Size(111, 40);
+            this.btnDesativados.TabIndex = 5;
+            this.btnDesativados.Text = "Desativados";
+            this.btnDesativados.UseVisualStyleBackColor = true;
+            this.btnDesativados.Click += new System.EventHandler(this.BtnDesativados_Click);
+            // 
             // FormVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDesativados);
+            this.Controls.Add(this.btnAddVendas);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormVendas";
             this.Text = "FormVendas";
             this.Load += new System.EventHandler(this.FormVendas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.querysInnerJoinDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,5 +249,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usuAltDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datIncDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datAltDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnAddVendas;
+        private System.Windows.Forms.Button btnDesativados;
     }
 }

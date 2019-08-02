@@ -1,4 +1,5 @@
-﻿using DataGridCarros.Edicao;
+﻿using DataGridCarros.Adicao;
+using DataGridCarros.Edicao;
 using DataGridCarros.Reativar;
 using System;
 using System.Collections.Generic;
@@ -59,6 +60,26 @@ namespace DataGridCarros
 
             }
             this.usuariosTableAdapter.CustomQuery(this.querysInnerJoinDataSet.Usuarios);
+        }
+
+        private void BtnAddUsuario_Click(object sender, EventArgs e)
+        {
+            AddUsuario addUsuario = new AddUsuario();
+            addUsuario.ShowDialog();
+
+            if (!string.IsNullOrEmpty(addUsuario.usuariosRow?.Nome))
+
+                this.usuariosTableAdapter.Insert(
+
+                     addUsuario.usuariosRow.Nome,
+                     true,
+                     1,
+                     1,
+                     DateTime.Now,
+                     DateTime.Now
+                );
+
+            this.usuariosTableAdapter.Fill(this.querysInnerJoinDataSet.Usuarios);
         }
     }
 }
