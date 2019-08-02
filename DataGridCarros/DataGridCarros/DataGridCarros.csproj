@@ -118,6 +118,12 @@
     <Compile Include="FormVendas.Designer.cs">
       <DependentUpon>FormVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Meme\Epico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meme\Epico.Designer.cs">
+      <DependentUpon>Epico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Carro.cs" />
     <Compile Include="Model\Marca.cs" />
     <Compile Include="Model\Usuario.cs" />
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVendas.resx">
       <DependentUpon>FormVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meme\Epico.resx">
+      <DependentUpon>Epico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
