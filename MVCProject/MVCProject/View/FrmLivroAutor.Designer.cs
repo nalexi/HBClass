@@ -29,18 +29,69 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAddLivAut = new System.Windows.Forms.Button();
             this.livroAutorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sistemaBibliotecaDBDataSet = new MVCProject.SistemaBibliotecaDBDataSet();
             this.livroAutorTableAdapter = new MVCProject.SistemaBibliotecaDBDataSetTableAdapters.LivroAutorTableAdapter();
-            this.btnAddLivAut = new System.Windows.Forms.Button();
-            this.EditCommand = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.livroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.livroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EditCommand = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.livroAutorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaBibliotecaDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnAddLivAut
+            // 
+            this.btnAddLivAut.Location = new System.Drawing.Point(12, 12);
+            this.btnAddLivAut.Name = "btnAddLivAut";
+            this.btnAddLivAut.Size = new System.Drawing.Size(100, 50);
+            this.btnAddLivAut.TabIndex = 1;
+            this.btnAddLivAut.Text = "Adicionar";
+            this.btnAddLivAut.UseVisualStyleBackColor = true;
+            // 
+            // livroAutorBindingSource
+            // 
+            this.livroAutorBindingSource.DataMember = "LivroAutor";
+            this.livroAutorBindingSource.DataSource = this.sistemaBibliotecaDBDataSet;
+            // 
+            // sistemaBibliotecaDBDataSet
+            // 
+            this.sistemaBibliotecaDBDataSet.DataSetName = "SistemaBibliotecaDBDataSet";
+            this.sistemaBibliotecaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // livroAutorTableAdapter
+            // 
+            this.livroAutorTableAdapter.ClearBeforeFill = true;
+            // 
+            // autorDataGridViewTextBoxColumn
+            // 
+            this.autorDataGridViewTextBoxColumn.DataPropertyName = "Autor";
+            this.autorDataGridViewTextBoxColumn.HeaderText = "Autor";
+            this.autorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
+            this.autorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.autorDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // livroDataGridViewTextBoxColumn
+            // 
+            this.livroDataGridViewTextBoxColumn.DataPropertyName = "Livro";
+            this.livroDataGridViewTextBoxColumn.HeaderText = "Livro";
+            this.livroDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.livroDataGridViewTextBoxColumn.Name = "livroDataGridViewTextBoxColumn";
+            this.livroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.livroDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // EditCommand
+            // 
+            this.EditCommand.HeaderText = "Editar";
+            this.EditCommand.MinimumWidth = 6;
+            this.EditCommand.Name = "EditCommand";
+            this.EditCommand.ReadOnly = true;
+            this.EditCommand.Text = "Editar";
+            this.EditCommand.UseColumnTextForButtonValue = true;
+            this.EditCommand.Width = 125;
             // 
             // dataGridView1
             // 
@@ -62,57 +113,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // livroAutorBindingSource
-            // 
-            this.livroAutorBindingSource.DataMember = "LivroAutor";
-            this.livroAutorBindingSource.DataSource = this.sistemaBibliotecaDBDataSet;
-            // 
-            // sistemaBibliotecaDBDataSet
-            // 
-            this.sistemaBibliotecaDBDataSet.DataSetName = "SistemaBibliotecaDBDataSet";
-            this.sistemaBibliotecaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // livroAutorTableAdapter
-            // 
-            this.livroAutorTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnAddLivAut
-            // 
-            this.btnAddLivAut.Location = new System.Drawing.Point(12, 12);
-            this.btnAddLivAut.Name = "btnAddLivAut";
-            this.btnAddLivAut.Size = new System.Drawing.Size(100, 50);
-            this.btnAddLivAut.TabIndex = 1;
-            this.btnAddLivAut.Text = "Adicionar";
-            this.btnAddLivAut.UseVisualStyleBackColor = true;
-            // 
-            // EditCommand
-            // 
-            this.EditCommand.HeaderText = "Editar";
-            this.EditCommand.MinimumWidth = 6;
-            this.EditCommand.Name = "EditCommand";
-            this.EditCommand.ReadOnly = true;
-            this.EditCommand.Text = "Editar";
-            this.EditCommand.UseColumnTextForButtonValue = true;
-            this.EditCommand.Width = 125;
-            // 
-            // livroDataGridViewTextBoxColumn
-            // 
-            this.livroDataGridViewTextBoxColumn.DataPropertyName = "Livro";
-            this.livroDataGridViewTextBoxColumn.HeaderText = "Livro";
-            this.livroDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.livroDataGridViewTextBoxColumn.Name = "livroDataGridViewTextBoxColumn";
-            this.livroDataGridViewTextBoxColumn.ReadOnly = true;
-            this.livroDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // autorDataGridViewTextBoxColumn
-            // 
-            this.autorDataGridViewTextBoxColumn.DataPropertyName = "Autor";
-            this.autorDataGridViewTextBoxColumn.HeaderText = "Autor";
-            this.autorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
-            this.autorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.autorDataGridViewTextBoxColumn.Width = 125;
-            // 
             // FrmLivroAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,22 +123,21 @@
             this.Name = "FrmLivroAutor";
             this.Text = "FrmLivroAutor";
             this.Load += new System.EventHandler(this.FrmLivroAutor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.livroAutorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaBibliotecaDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private SistemaBibliotecaDBDataSet sistemaBibliotecaDBDataSet;
         private System.Windows.Forms.BindingSource livroAutorBindingSource;
         private SistemaBibliotecaDBDataSetTableAdapters.LivroAutorTableAdapter livroAutorTableAdapter;
         private System.Windows.Forms.Button btnAddLivAut;
-        private System.Windows.Forms.DataGridViewButtonColumn EditCommand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn livroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn autorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn livroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn EditCommand;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
