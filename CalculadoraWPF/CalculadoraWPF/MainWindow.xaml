@@ -9,8 +9,9 @@
         Title="MainWindow" Height="450" Width="800" >
         <Grid>
         
+        
         <y:ucLogin x:Name="ucLoginForm" loginSuccess="UcLoginForm_loginSuccess" ></y:ucLogin>
         <y:ucContas x:Name="ucContasForm" Visibility="Hidden"></y:ucContas>
-            
-        </Grid>
+
+    </Grid>
 </Window>
