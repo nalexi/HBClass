@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="wpfAppEntity.Views.ucLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:wpfAppEntity.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="109*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="167*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="tbxLogin" FontSize="32" HorizontalAlignment="Left" Height="58" Margin="9,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Grid.Column="1"/>
+        <TextBox Name="tbxSenha" FontSize="32" HorizontalAlignment="Left" Height="53" Margin="9,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Grid.Row="1" Grid.Column="1"/>
+        <Button FontFamily="comic Sans MS" Content="Button" HorizontalAlignment="Left" Margin="9,16.6,0,0" VerticalAlignment="Top" Width="258" Height="51" Grid.Row="2" Grid.Column="1" Click="Button_Click"/>
+        <Label Content="Login" FontSize="32" FontFamily="comic Sans MS" HorizontalAlignment="Left" Margin="190,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.248,0.225"/>
+        <Label Content="Senha" FontSize="32" FontFamily="comic Sans MS" HorizontalAlignment="Left" Margin="176,19,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+
+    </Grid>
+</UserControl>
